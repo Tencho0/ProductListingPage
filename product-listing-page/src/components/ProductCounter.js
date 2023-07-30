@@ -1,11 +1,10 @@
 import React from 'react';
+import './ProductCounter.css';
 
-const ProductCounter = ({ displayedProducts, totalProducts }) => {
+const ProductCounter = ({ currentCount, totalCount }) => {
   return (
     <div className="product-counter">
-      <p>
-        {displayedProducts.length} out of {totalProducts} products
-      </p>
+      {`Showing ${currentCount} out of ${totalCount} products`}
     </div>
   );
 };

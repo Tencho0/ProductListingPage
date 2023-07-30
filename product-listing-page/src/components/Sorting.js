@@ -1,21 +1,18 @@
 import React from 'react';
+import { Form } from 'react-bootstrap';
 
-const Sorting = ({ onSortChange }) => {
-  const handleSortChange = (event) => {
-    const selectedOption = event.target.value;
-    onSortChange(selectedOption); // Call the onSortChange prop with the selected option
-  };
-
+const Sorting = ({ sortOption, handleSortChange }) => {
   return (
     <div className="sorting">
-      <label>Sort By:</label>
-      <select onChange={handleSortChange}>
-        <option value="">Select an option</option>
-        <option value="alphabetical-az">Alphabetical A-Z</option>
-        <option value="alphabetical-za">Alphabetical Z-A</option>
-        <option value="price-asc">Price Ascending</option>
-        <option value="price-desc">Price Descending</option>
-      </select>
+      <Form.Group controlId="sortingDropdown">
+        <Form.Label>Sort By:</Form.Label>
+        <Form.Select value={sortOption} onChange={(e) => handleSortChange(e.target.value)}>
+          <option value="alphabetical-a-z">Alphabetical A-Z</option>
+          <option value="alphabetical-z-a">Alphabetical Z-A</option>
+          <option value="price-ascending">Price (Low to High)</option>
+          <option value="price-descending">Price (High to Low)</option>
+        </Form.Select>
+      </Form.Group>
     </div>
   );
 };

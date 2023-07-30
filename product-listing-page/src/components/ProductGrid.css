@@ -1,0 +1,50 @@
+/* src/components/ProductGrid.css */
+
+.product-card {
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  padding: 10px;
+  margin-bottom: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.product-card img {
+  width: 100%;
+  max-height: 200px;
+  object-fit: cover;
+  border-radius: 5px;
+}
+
+.product-card h4 {
+  margin-top: 10px;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.product-card p {
+  font-size: 14px;
+}
+
+.product-card .discounted-price {
+  text-decoration: line-through;
+  color: #999;
+  margin-right: 5px;
+}
+
+.product-card .original-price {
+  font-weight: bold;
+}
+
+.product-card .ratings {
+  margin-top: 5px;
+  font-size: 14px;
+  color: #ffa500;
+}
+
+.product-card .add-to-cart-button {
+  margin-top: 10px;
+}
+
+.product-card .add-to-cart-button button {
+  width: 100%;
+}

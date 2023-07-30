@@ -1,0 +1,40 @@
+/* src/components/Filtering.css */
+
+.filtering {
+    margin-bottom: 20px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+  }
+  
+  .filtering h3 {
+    margin-bottom: 10px;
+  }
+  
+  .price-filter-inputs {
+    display: flex;
+    align-items: center;
+  }
+  
+  .price-filter-inputs input {
+    width: 100px;
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin: 0 5px;
+  }
+  
+  .color-checkbox {
+    display: flex;
+    align-items: center;
+  }
+  
+  .color-checkbox label {
+    margin-right: 10px;
+  }
+  
+  .color-checkbox input[type='checkbox'] {
+    margin-right: 5px;
+  }
+  

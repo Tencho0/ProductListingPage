@@ -1,20 +1,13 @@
 import React from 'react';
+import './Footer.css'; 
 
 const Footer = () => {
   return (
     <footer className="footer">
-      <div className="container">
-        <div className="row">
-          <div className="col-md-4">
-            <p>T&C</p>
-          </div>
-          <div className="col-md-4">
-            <p>Privacy Policy</p>
-          </div>
-          <div className="col-md-4">
-            <p>Contact Us</p>
-          </div>
-        </div>
+      <div className="footer-links">
+        <a href="#terms">T&C</a>
+        <a href="#privacy-policy">Privacy Policy</a>
+        <a href="#contact">Contact Us</a>
       </div>
     </footer>
   );

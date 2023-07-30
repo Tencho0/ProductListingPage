@@ -1,10 +1,11 @@
 import React from 'react';
+import './ProductInfo.css'; 
 
-const ProductInfo = ({ categoryName, shortDescription }) => {
+const ProductInfo = ({ category, description }) => {
   return (
     <div className="product-info">
-      <h3>{categoryName}</h3>
-      <p>{shortDescription}</p>
+      <h2>{category}</h2>
+      <p>{description}</p>
     </div>
   );
 };

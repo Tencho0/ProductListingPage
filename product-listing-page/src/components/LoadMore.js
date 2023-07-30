@@ -1,12 +1,17 @@
 import React from 'react';
+import './LoadMore.css'; 
 import { Button } from 'react-bootstrap';
 
-const LoadMore = ({ onLoadMore }) => {
+const LoadMore = ({ onLoadMore, isAllLoaded }) => {
   return (
     <div className="load-more">
-      <Button variant="primary" onClick={onLoadMore}>
-        Load More
-      </Button>
+      {!isAllLoaded ? (
+        <Button variant="primary" onClick={onLoadMore}>
+          Load More
+        </Button>
+      ) : (
+        <p>No more products to load.</p>
+      )}
     </div>
   );
 };

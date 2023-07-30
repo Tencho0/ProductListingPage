@@ -1,4 +1,5 @@
-[
+{
+  "products": [
     {
       "id": 1,
       "category": "Bags",
@@ -55,4 +56,4 @@
       "image": "https://assets.adidas.com/images/h_840,f_auto,q_auto,fl_lossy,c_fill,g_auto/89afa6a48d7d4732b8daaead00ed1b45_9366/Start_Your_Run_Running_Shoes_Black_GY9234_01_standard.jpg"
     }
   ]
-  
+}

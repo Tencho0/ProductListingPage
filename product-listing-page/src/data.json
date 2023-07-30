@@ -8,7 +8,8 @@
       "price": 120,
       "discountedPrice": 100,
       "rating": 4.5,
-      "image": "https://m.media-amazon.com/images/I/61RSyB+kbzL._SY395_.jpg"
+      "image": "https://m.media-amazon.com/images/I/61RSyB+kbzL._SY395_.jpg",
+      "color": "Beige"
     },
     {
       "id": 2,
@@ -17,7 +18,8 @@
       "description": "Durable canvas backpack with multiple pockets",
       "price": 65,
       "rating": 4,
-      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSXR3dSNI2HfOAKHLgCGm3Hj2F1hBuchAAOaw&usqp=CAU"
+      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSXR3dSNI2HfOAKHLgCGm3Hj2F1hBuchAAOaw&usqp=CAU",
+      "color": "Camouflaged"
     },
     {
       "id": 3,
@@ -26,7 +28,8 @@
       "description": "Comfortable sneakers with breathable fabric",
       "price": 80,
       "rating": 4.2,
-      "image": "https://stevemadden.ie/cdn/shop/products/STEVEMADDEN-INTL_POSSESSION_SILVER-WHITE_SIDE_1000x1000.jpg?v=1639387838"
+      "image": "https://stevemadden.ie/cdn/shop/products/STEVEMADDEN-INTL_POSSESSION_SILVER-WHITE_SIDE_1000x1000.jpg?v=1639387838",
+      "color": "White"  
     },
     {
       "id": 4,
@@ -35,7 +38,8 @@
       "description": "Classic leather loafers for formal occasions",
       "price": 110,
       "rating": 4.8,
-      "image": "https://johnsimons.co.uk/wp-content/uploads/2023/02/RANCORT01.jpg"
+      "image": "https://johnsimons.co.uk/wp-content/uploads/2023/02/RANCORT01.jpg",
+      "color": "Brown"  
     },
     {
       "id": 5,
@@ -44,7 +48,8 @@
       "description": "Compact crossbody bag for daily use",
       "price": 45,
       "rating": 4.3,
-      "image": "https://cdn.packhacker.com/2022/06/9bf70e79-pacsafe-go-anti-theft-crossbody-bag-close.jpg?auto=compress&auto=format&w=1200&h=630&fit=crop"
+      "image": "https://cdn.packhacker.com/2022/06/9bf70e79-pacsafe-go-anti-theft-crossbody-bag-close.jpg?auto=compress&auto=format&w=1200&h=630&fit=crop",
+      "color": "Blue"  
     },
     {
       "id": 6,
@@ -53,7 +58,8 @@
       "description": "High-performance running shoes with cushioned soles",
       "price": 95,
       "rating": 4.6,
-      "image": "https://assets.adidas.com/images/h_840,f_auto,q_auto,fl_lossy,c_fill,g_auto/89afa6a48d7d4732b8daaead00ed1b45_9366/Start_Your_Run_Running_Shoes_Black_GY9234_01_standard.jpg"
+      "image": "https://assets.adidas.com/images/h_840,f_auto,q_auto,fl_lossy,c_fill,g_auto/89afa6a48d7d4732b8daaead00ed1b45_9366/Start_Your_Run_Running_Shoes_Black_GY9234_01_standard.jpg",
+      "color": "Black"
     }
   ]
 }

@@ -15,26 +15,8 @@ function App() {
   const [activeCategory, setActiveCategory] = useState('Bags');
   const [currentCount, setCurrentCount] = useState(10);
   const [totalCount, setTotalCount] = useState(data.products.length);
-
-
-  // useEffect(() => {
-  //   const fetchData = async () => {
-  //     try {
-  //       const response = await fetch('./data.json');
-  //       const data = await response.json();
-  //       setProducts(data.products);
-  //       setTotalCount(data.totalCount);
-  //     } catch (error) {
-  //       console.error('Error fetching data from data.json:', error);
-  //     }
-  //   };
-
-  //   fetchData();
-  // }, []);
   
   const colors = data.products.map((product) => product.color);
-
-  const priceRange = { min: 10, max: 500 };
 
   const [selectedColors, setSelectedColors] = useState([]);
 

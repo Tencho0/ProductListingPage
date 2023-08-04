@@ -1,5 +1,8 @@
 import React from 'react';
 import { Navbar, Container, Nav } from 'react-bootstrap';
+// import logoImage from '../../public/images/logoImage.jpg'
+import logoImage from './Assests/logoImage.jpg'
+import './Header.css';
 
 const Header = ({ activeCategory, setActiveCategory }) => {
   const handleCategoryClick = (category) => {
@@ -9,7 +12,13 @@ const Header = ({ activeCategory, setActiveCategory }) => {
   return (
     <Navbar bg="light" expand="lg" sticky="top">
       <Container>
-        <Navbar.Brand href="/">Your Logo</Navbar.Brand>
+        <Navbar.Brand href="/">
+          <img
+            src={logoImage}
+            alt="Logo for my online shopping store"
+            className="logo-image"
+          />
+        </Navbar.Brand>
         <Navbar.Toggle aria-controls="navbar" />
         <Navbar.Collapse id="navbar">
           <Nav className="ms-auto">

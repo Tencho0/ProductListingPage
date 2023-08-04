@@ -9,13 +9,14 @@ import ProductInfo from './components/ProductInfo';
 import LoadMore from './components/LoadMore';
 import Footer from './components/Footer';
 import data from './data.json'
+import './App.css';
 
 function App() {
   const [products, setProducts] = useState(data.products);
   const [activeCategory, setActiveCategory] = useState('Bags');
-  const [currentCount, setCurrentCount] = useState(10);
+  const [currentCount, setCurrentCount] = useState(3);
   const [totalCount, setTotalCount] = useState(data.products.length);
-  
+
   const colors = data.products.map((product) => product.color);
 
   const [selectedColors, setSelectedColors] = useState([]);
@@ -26,16 +27,12 @@ function App() {
   const [sortOption, setSortOption] = useState('alphabetical-a-z');
 
   const handleColorChange = (color) => {
-    // Check if the color is already selected
     const isSelected = selectedColors.includes(color);
 
-    // Create a new array with updated selected colors based on the user's action
     let updatedColors;
     if (isSelected) {
-      // If the color is already selected, remove it from the selectedColors array
       updatedColors = selectedColors.filter((c) => c !== color);
     } else {
-      // If the color is not selected, add it to the selectedColors array
       updatedColors = [...selectedColors, color];
     }
 
@@ -55,9 +52,10 @@ function App() {
   };
 
   const handleLoadMore = () => {
-    // Implement logic to load more products here
-    // For demonstration purposes, let's just increase the current count by 10
-    setCurrentCount((prevCount) => prevCount + 10);
+    const newCount = currentCount + 3;
+    const updatedCount = newCount <= totalCount ? newCount : totalCount;
+
+    setCurrentCount(updatedCount);
   };
 
   return (
@@ -75,13 +73,14 @@ function App() {
       <Sorting sortOption={sortOption} handleSortChange={handleSortChange} />
       <ProductInfo category={activeCategory} description="Short description of the selected category." />
       <ProductGrid
-        products={products}
+        products={products.slice(0, currentCount)}
         filteredColors={selectedColors}
         minPrice={minPrice}
         maxPrice={maxPrice}
         sortOption={sortOption}
       />
-      <LoadMore onLoadMore={handleLoadMore} isAllLoaded={currentCount >= totalCount} />
+      {currentCount < totalCount && <LoadMore onLoadMore={handleLoadMore} />}
+      {/* <LoadMore onLoadMore={handleLoadMore} isAllLoaded={currentCount >= totalCount} /> */}
       <Footer />
     </div>
   );

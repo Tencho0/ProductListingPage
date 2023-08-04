@@ -5,8 +5,8 @@
       "category": "Bags",
       "name": "Leather Handbag",
       "description": "Premium leather handbag with spacious compartments",
-      "price": 120,
-      "discountedPrice": 100,
+      "price": 100,
+      "discountedPrice": 120,
       "rating": 4.5,
       "image": "https://m.media-amazon.com/images/I/61RSyB+kbzL._SY395_.jpg",
       "color": "Beige"
@@ -27,6 +27,7 @@
       "name": "Sneakers",
       "description": "Comfortable sneakers with breathable fabric",
       "price": 80,
+      "discountedPrice": 145,
       "rating": 4.2,
       "image": "https://stevemadden.ie/cdn/shop/products/STEVEMADDEN-INTL_POSSESSION_SILVER-WHITE_SIDE_1000x1000.jpg?v=1639387838",
       "color": "White"  

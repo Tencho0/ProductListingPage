@@ -8,7 +8,7 @@ import Sorting from './components/Sorting';
 import ProductInfo from './components/ProductInfo';
 import LoadMore from './components/LoadMore';
 import Footer from './components/Footer';
-import data from './data.json';
+import data from './data.json'
 
 function App() {
   const [products, setProducts] = useState(data.products);
@@ -32,7 +32,7 @@ function App() {
   //   fetchData();
   // }, []);
   
-  const colors = ['Red', 'Blue', 'Green', 'Yellow'];
+  const colors = data.products.map((product) => product.color);
 
   const priceRange = { min: 10, max: 500 };
 

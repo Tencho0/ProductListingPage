@@ -1,5 +1,3 @@
-// src/components/Header.js
-
 import React from 'react';
 import { Navbar, Container, Nav } from 'react-bootstrap';
 
@@ -18,14 +16,14 @@ const Header = ({ activeCategory, setActiveCategory }) => {
             <Nav.Link
               href="/"
               active={activeCategory === 'bags'}
-              onClick={() => handleCategoryClick('bags')}
+              onClick={() => handleCategoryClick('Bags')}
             >
               Bags
             </Nav.Link>
             <Nav.Link
               href="/"
               active={activeCategory === 'shoes'}
-              onClick={() => handleCategoryClick('shoes')}
+              onClick={() => handleCategoryClick('Shoes')}
             >
               Shoes
             </Nav.Link>

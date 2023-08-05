@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import './ProductGrid.css';
 import { Card, Button, Container, Row, Col, Alert } from 'react-bootstrap';
 
-const ProductGrid = ({ products, filteredColors, minPrice, maxPrice, sortOption }) => {
+const ProductGrid = ({ products, filteredColors, minPrice, maxPrice, sortOption, activeCategory }) => {
   const [cartItems, setCartItems] = useState([]);
   const [showSuccessAlert, setShowSuccessAlert] = useState(false); // State for the success alert
 
@@ -10,7 +10,8 @@ const ProductGrid = ({ products, filteredColors, minPrice, maxPrice, sortOption 
     const isColorMatch = filteredColors.length === 0 || filteredColors.includes(product.color);
     const isPriceMatch =
       (minPrice === '' || product.price >= +minPrice) && (maxPrice === '' || product.price <= +maxPrice);
-    return isColorMatch && isPriceMatch;
+    const isCategoryMatch = product.category === activeCategory;
+    return isColorMatch && isPriceMatch && isCategoryMatch;
   });
 
   const sortProducts = (products) => {

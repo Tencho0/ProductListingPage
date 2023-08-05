@@ -1,5 +1,14 @@
+.navbar {
+  height: 100px;
+  border-bottom: 1px solid black;
+}
+
 .logo-image {
-    width: 100px; /* Set the desired width for your logo */
-    height: auto; /* Let the height adjust proportionally based on the width */
-    /* You can adjust these values based on your desired image size */
-  }
+  width: 100px;
+  max-height: 80px;
+  padding: 10px;
+}
+
+.nav-link {
+  color: #333333;
+}

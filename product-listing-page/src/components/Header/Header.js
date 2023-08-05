@@ -1,6 +1,6 @@
 import React from 'react';
 import { Navbar, Container, Nav } from 'react-bootstrap';
-import logoImage from '../Assests/logoImage.jpg';
+import logoImage from '../../Assests/logoImage.jpg';
 import './Header.css';
 
 const Header = ({ activeCategory, setActiveCategory, categories }) => {

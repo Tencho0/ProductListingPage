@@ -61,6 +61,17 @@
       "rating": 4.6,
       "image": "https://assets.adidas.com/images/h_840,f_auto,q_auto,fl_lossy,c_fill,g_auto/89afa6a48d7d4732b8daaead00ed1b45_9366/Start_Your_Run_Running_Shoes_Black_GY9234_01_standard.jpg",
       "color": "Black"
+    },
+    {
+      "id": 7,
+      "category": "Watches",
+      "name": "G-Shock MTG-B3000 Aurora Rainbow Limited Edition",
+      "description": "Immerse yourself in stunning structural and luminous beauty — metal meets resin in a very special textural MT-G timepiece inspired by the aurora borealis.",
+      "price": 1400,
+      "discountedPrice": 1600,
+      "rating": 4.9,
+      "image": "https://www.watches.com/cdn/shop/files/G-Shock-MTG-B3000PRB-1A_1800x1800.jpg?v=1690316706",
+      "color": "Rainbow"
     }
   ]
 }

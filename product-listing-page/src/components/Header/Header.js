@@ -1,9 +1,9 @@
 import React from 'react';
 import { Navbar, Container, Nav } from 'react-bootstrap';
-import logoImage from './Assests/logoImage.jpg'
+import logoImage from '../Assests/logoImage.jpg';
 import './Header.css';
 
-const Header = ({ activeCategory, setActiveCategory }) => {
+const Header = ({ activeCategory, setActiveCategory, categories }) => {
   const handleCategoryClick = (category) => {
     setActiveCategory(category);
   };
@@ -21,21 +21,16 @@ const Header = ({ activeCategory, setActiveCategory }) => {
         <Navbar.Toggle aria-controls="navbar" />
         <Navbar.Collapse id="navbar">
           <Nav className="ms-auto">
-            <Nav.Link
-              href="/"
-              active={activeCategory === 'bags'}
-              onClick={() => handleCategoryClick('Bags')}
-            >
-              Bags
-            </Nav.Link>
-            <Nav.Link
-              href="/"
-              active={activeCategory === 'shoes'}
-              onClick={() => handleCategoryClick('Shoes')}
-            >
-              Shoes
-            </Nav.Link>
-            {/* Add more categories if needed */}
+            {categories.map((category) => (
+              <Nav.Link
+                key={category}
+                href="/"
+                active={activeCategory === category.toLowerCase()}
+                onClick={() => handleCategoryClick(category)}
+              >
+                {category}
+              </Nav.Link>
+            ))}
           </Nav>
         </Navbar.Collapse>
       </Container>

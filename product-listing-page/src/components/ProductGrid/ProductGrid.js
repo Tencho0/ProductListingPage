@@ -32,7 +32,7 @@ const ProductGrid = ({ products, filteredColors, minPrice, maxPrice, sortOption 
 
   const handleAddToCart = (product) => {
     setCartItems((prevCartItems) => [...prevCartItems, product]);
-    setShowSuccessAlert(true); // Set the success alert to true when adding to cart
+    setShowSuccessAlert(true);
   };
   return (
     <div>

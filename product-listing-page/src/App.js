@@ -1,13 +1,13 @@
 import React, { useState, useEffect } from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import Header from './components/Header';
-import ProductCounter from './components/ProductCounter';
-import ProductGrid from './components/ProductGrid';
-import Filtering from './components/Filtering';
-import Sorting from './components/Sorting';
-import ProductInfo from './components/ProductInfo';
-import LoadMore from './components/LoadMore';
-import Footer from './components/Footer';
+import Header from './components/Header/Header';
+import ProductCounter from './components/ProductCounter/ProductCounter';
+import ProductGrid from './components/ProductGrid/ProductGrid';
+import Filtering from './components/Filtering/Filtering';
+import Sorting from './components/Sorting/Sorting';
+import ProductInfo from './components/ProductInfo/ProductInfo';
+import LoadMore from './components/LoadMore/LoadMore';
+import Footer from './components/Footer/Footer';
 import data from './data.json'
 import './App.css';
 
@@ -18,6 +18,7 @@ function App() {
   const [totalCount, setTotalCount] = useState(data.products.length);
 
   const colors = data.products.map((product) => product.color);
+  const categories = [...new Set(data.products.map((product) => product.category))];
 
   const [selectedColors, setSelectedColors] = useState([]);
 
@@ -60,7 +61,11 @@ function App() {
 
   return (
     <div>
-      <Header activeCategory={activeCategory} setActiveCategory={setActiveCategory} />
+      <Header
+        activeCategory={activeCategory}
+        setActiveCategory={setActiveCategory}
+        categories={categories}
+      />
       <ProductCounter currentCount={currentCount} totalCount={totalCount} />
       <Filtering
         colors={colors}
@@ -80,7 +85,6 @@ function App() {
         sortOption={sortOption}
       />
       {currentCount < totalCount && <LoadMore onLoadMore={handleLoadMore} />}
-      {/* <LoadMore onLoadMore={handleLoadMore} isAllLoaded={currentCount >= totalCount} /> */}
       <Footer />
     </div>
   );

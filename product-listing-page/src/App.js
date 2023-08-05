@@ -17,13 +17,27 @@ function App() {
   const [currentCount, setCurrentCount] = useState(3);
   const [totalCount, setTotalCount] = useState(data.products.length);
 
-  const colors = data.products.map((product) => product.color);
+  const colors = [...new Set(data.products.map((product) => product.color))];
   const categories = [...new Set(data.products.map((product) => product.category))];
 
   const [selectedColors, setSelectedColors] = useState([]);
 
   const [minPrice, setMinPrice] = useState('');
   const [maxPrice, setMaxPrice] = useState('');
+
+  useEffect(() => {
+    const filteredProducts = data.products.filter((product) => {
+      if (selectedColors.length === 0) {
+        return true;
+      } else {
+        return selectedColors.includes(product.color);
+      }
+    });
+
+    setProducts(filteredProducts);
+    setCurrentCount(3);
+    setTotalCount(filteredProducts.length);
+  }, [selectedColors]);
 
   const [sortOption, setSortOption] = useState('alphabetical-a-z');
 

@@ -72,6 +72,47 @@
       "rating": 4.9,
       "image": "https://www.watches.com/cdn/shop/files/G-Shock-MTG-B3000PRB-1A_1800x1800.jpg?v=1690316706",
       "color": "Rainbow"
+    },
+    {
+      "id": 8,
+      "category": "Watches",
+      "name": "G-Shock GA700 Ana-Digi",
+      "description": "A new utility color collection based on the GA700 case features three additional colorways.",
+      "price": 99,
+      "rating": 4.7,
+      "image": "https://www.watches.com/cdn/shop/products/GA-700UC-3A__49240.1501265738.1280.1280_1800x1800.jpg?v=1570417048",
+      "color": "Green"
+    },    
+    {
+      "id": 9,
+      "category": "Watches",
+      "name": "G-Shock GA700 Ana-Digi",
+      "description": "A new utility color collection based on the GA700 case features three additional colorways.",
+      "price": 99,
+      "rating": 4.8,
+      "image": "https://www.watches.com/cdn/shop/products/GA-700UC-8A__45689.1501265734.1280.1280_1800x1800.jpg?v=1570417048",
+      "color": "Gray"
+    },
+    {
+      "id": 10,
+      "category": "Watches",
+      "name": "Waldhoff Multimatic Automatic",
+      "description": "The Multimatic is our flagship product for the discerning gentleman, and a favorite among our customers.",
+      "price": 499,
+      "discountedPrice": 675,
+      "rating": 5.0,
+      "image": "https://www.watches.com/cdn/shop/products/Waldhoff-RoyalBlue1_1800x1800.jpg?v=1678917036",
+      "color": "Royal Blue"
+    },
+    {
+      "id": 11,
+      "category": "Bracelets",
+      "name": "Leather Essentials Black Leather Strap Bracelet",
+      "description": "Timeless black leather strap bracelet exuding elegance and versatility for any occasion. A must-have accessory for your style.",
+      "price": 65,
+      "rating": 4.1,
+      "image": "https://fossil.scene7.com/is/image/FossilPartners/JF04473040_main?$sfcc_fos_hi-res$",
+      "color": "Black"
     }
   ]
 }

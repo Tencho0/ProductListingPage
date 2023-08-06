@@ -24,7 +24,6 @@ const Header = ({ activeCategory, setActiveCategory, categories }) => {
             {categories.map((category) => (
               <Nav.Link
                 key={category}
-                href="/"
                 active={activeCategory === category.toLowerCase()}
                 onClick={() => handleCategoryClick(category)}
               >

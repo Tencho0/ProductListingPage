@@ -82,33 +82,53 @@ function ProductShop() {
 
     return (
         <div>
-            <Header
-                activeCategory={activeCategory}
-                setActiveCategory={handleCategoryClick}
-                categories={categories}
-            />
-            <ProductCounter currentCount={currentCount} totalCount={totalCount} />
-            <Filtering
-                colors={colors}
-                selectedColors={selectedColors}
-                handleColorChange={handleColorChange}
-                minPrice={minPrice}
-                maxPrice={maxPrice}
-                handlePriceChange={handlePriceChange}
-            />
-            <Sorting sortOption={sortOption} handleSortChange={handleSortChange} />
-            <ProductInfo category={activeCategory} description="Short description of the selected category." />
-            <ProductGrid
-                products={products.slice(0, currentCount)}
-                filteredColors={selectedColors}
-                minPrice={minPrice}
-                maxPrice={maxPrice}
-                sortOption={sortOption}
-                activeCategory={activeCategory}
-            />
-            {currentCount < totalCount && <LoadMore onLoadMore={handleLoadMore} />}
-            <Footer />
+        <Header
+            activeCategory={activeCategory}
+            setActiveCategory={handleCategoryClick}
+            categories={categories}
+        />
+        <ProductCounter currentCount={currentCount} totalCount={totalCount} />
+        <div className='container'>
+            <div className='row'>
+                <div className='col-12 col-md-2'>
+                    <div className='filter-div'>
+                        <Filtering
+                            colors={colors}
+                            selectedColors={selectedColors}
+                            handleColorChange={handleColorChange}
+                            minPrice={minPrice}
+                            maxPrice={maxPrice}
+                            handlePriceChange={handlePriceChange}
+                        />
+                    </div>
+                </div>
+                <div className='col-12 col-md-10'>
+                    <div className='main-section'>
+                        <div className='product-info-sort'>
+                            <div className='product-info'>
+                                <ProductInfo category={activeCategory} description="Short description of the selected category." />
+                            </div>
+                            <div className='sorting'>
+                                <Sorting sortOption={sortOption} handleSortChange={handleSortChange} />
+                            </div>
+                        </div>
+                        <div className='product-grid-wrapper'>
+                            <ProductGrid
+                                products={products.slice(0, currentCount)}
+                                filteredColors={selectedColors}
+                                minPrice={minPrice}
+                                maxPrice={maxPrice}
+                                sortOption={sortOption}
+                                activeCategory={activeCategory}
+                            />
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
+        {currentCount < totalCount && <LoadMore onLoadMore={handleLoadMore} />}
+        <Footer />
+    </div>
     );
 }
 
